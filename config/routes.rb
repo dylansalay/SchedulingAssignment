@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'schedule/home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'work_schedule', to: 'schedule#home'
+  
 end

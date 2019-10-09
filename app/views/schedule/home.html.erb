@@ -1,37 +1,25 @@
 <h1>Schedule</h1>
-
 <table>
   <thead>
-  <tr>
-    <th>Time</th>
-    <th>Technician</th>
-  </tr>
-    <th>
+    <tr>
+      <th>10/1/19 </th>
       <% @technicians.each do |tech| %>
-        <td><%= tech.name %></td>
+      <th><%= tech.name %></th>
       <% end %>
-    </th>
+    </tr>
   </thead>
 
-  <tbody>
-  <tr>
-    <td>
-      <% array = ["6:00am", "7:00am", "8:00am", "9:00am", "10:00am", "11:00am", "12:00pm", "13:00pm", "14:00pm", "15:00pm", "16:00pm", "17:00pm", "18:00pm"]
-      array.each do |time| %>
-        <tr>
-          <td><%= time %></td>
-        </tr>
-      <% end %>
-    </td>
-    <td>
-    <% @work_ord.each do |order| %>
-      <tr>
-        <td><%= order.time %></td>
-        <td><%= order.duration %></td>
-        <td><%= order.price %></td>
-      </tr>
-    </td>
-    <% end %>
+  <tbody
+    <tr>
+  <% @work_order.each do |order| %> 
+      <td><%= order.time.beginning_of_hour.to_s(:due_time)%></td>
+      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
+      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
+      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
+      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
-    
+
+  
