@@ -9,17 +9,35 @@
     </tr>
   </thead>
 
-  <tbody
+  <tbody>
+  <% @work_order.each do |w| %>
     <tr>
-  <% @work_order.each do |order| %> 
-      <td><%= order.time.beginning_of_hour.to_s(:due_time)%></td>
-      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
-      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
-      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
-      <td><%= order.time.to_s(:due_time)%> Technician id: <%= order.technician_id %>, Location: <%= order.location.name%>, <%= order.location.city %>, Duration: <%= order.duration %>, Price:<%= order.price %></td>
+      <td width="200px"><%= w.time.beginning_of_hour.to_s(:due_time)%></td>
+      <% if w.technician_id ==1 %>
+        <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+      <% else %>
+        <td> </td>
+      <% end %>
+      <% if w.technician_id ==2 %>
+        <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+      <% else %>
+        <td> </td>
+      <% end %>
+      <% if w.technician_id ==3 %>
+        <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+      <% else %>
+      <td> </td>
+        <% end %>
+      <% if w.technician_id ==4 %>
+        <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+      <% else %>
+        <td> </td>
+      <% end %>
     </tr>
   <% end %>
   </tbody>
 </table>
-
   
+<% @time_of_day.each do |t| %>
+  <%= t %>
+<% end %>
