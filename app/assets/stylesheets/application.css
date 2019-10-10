@@ -1,3 +1,39 @@
-th {
-    margin: 5px;
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: 400;
+}
+
+table {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+table th {
+    border: 1px solid #aaa;
+}
+
+tbody td {
+    border: 1px solid #aaa;
+}
+
+tbody td, tbody th {
+    position: relative;
+}
+
+tbody td:hover::after,
+tbody th:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #ffa;
+    left: 0;
+    top: -5000px;
+    height:10000px;
+    width: 100%;
+    z-index: -1;
+}
+
+tbody tr:hover {
+    background-color: #ffa;
 }
