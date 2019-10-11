@@ -16,24 +16,24 @@
       <% @work_order.each do |w| %>
           <th width="200px"><%= w.time.beginning_of_hour.to_s(:due_time)%></th>
           <% if w.technician_id ==1 %>
-            <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
-            <td> </td>
+            <td onclick="availAlert()"> </td>
           <% end %>
           <% if w.technician_id ==2 %>
-            <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
-            <td> </td>
+            <td onclick="availAlert()"> </td>
           <% end %>
           <% if w.technician_id ==3 %>
-            <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
-          <td> </td>
+          <td onclick="availAlert()"> </td>
             <% end %>
           <% if w.technician_id ==4 %>
-            <td><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
-            <td> </td>
+            <td onclick="availAlert()"> </td>
           <% end %>
         </tr>
       <% end %>
@@ -45,3 +45,20 @@
 <% @time_of_day.each do |t| %>
   <%= t %>
 <% end %>
+
+
+<script>
+
+# <%= javascript_tag do %>
+#   const workOrder = <%= @work_order.to_json %> 
+# <% end %>
+
+function schedAlert() {
+  alert("There is a work order scheduled at this time");
+}
+
+function availAlert() {
+  alert("There is x amount of time between work orders");
+}
+
+</script>
