@@ -1,4 +1,5 @@
 <%= javascript_include_tag "home" %>
+<%= include_gon %>
 
 <h1>Schedule</h1>
 <div class="media">
@@ -18,7 +19,7 @@
       <% @work_order.each do |w| %>
           <th width="200px"><%= w.time.beginning_of_hour.to_s(:due_time)%></th>
           <% if w.technician_id ==1 %>
-            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
             <td onclick="availAlert()"> </td>
           <% end %>
