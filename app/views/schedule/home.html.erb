@@ -1,3 +1,5 @@
+<%= javascript_include_tag "home" %>
+
 <h1>Schedule</h1>
 <div class="media">
   <div class="media-body">
@@ -47,15 +49,3 @@
 <% end %>
 
 
-<script>
-const order = <%= @work_order.inspect.html_safe %>;
-
-function schedAlert() {
-  alert("There is a work order scheduled at this time");
-}
-
-function availAlert() {
-  alert("There is x amount of time between work orders");
-}
-
-</script>

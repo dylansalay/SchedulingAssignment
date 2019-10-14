@@ -8,7 +8,6 @@ class ScheduleController < ApplicationController
     
     @work_order = WorkOrder.technician_schedule_by_time
     
-    
     # The three queries below all produce the same result as the custom scope used above. 
 
     # @work_order = WorkOrder.joins(:location, :technician).unscoped.group(:time, :id).select("*").order(:time)
