@@ -7,7 +7,7 @@ class ScheduleController < ApplicationController
     
     
     @work_order = WorkOrder.technician_schedule_by_time
-    gon.work_order = WorkOrder.first.to_json
+    gon.work_order = WorkOrder.all.to_json
 
 
     # The three queries below all produce the same result as the custom scope used above. 

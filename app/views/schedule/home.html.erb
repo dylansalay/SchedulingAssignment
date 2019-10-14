@@ -24,17 +24,17 @@
             <td onclick="availAlert()"> </td>
           <% end %>
           <% if w.technician_id ==2 %>
-            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
             <td onclick="availAlert()"> </td>
           <% end %>
           <% if w.technician_id ==3 %>
-            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
           <td onclick="availAlert()"> </td>
             <% end %>
           <% if w.technician_id ==4 %>
-            <td onclick="schedAlert()"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%> Technician id: <%= w.technician_id %>, Location: <%= w.location.name%>, <%= w.location.city %>, Duration: <%= w.duration %>, Price:<%= w.price %></td>
           <% else %>
             <td onclick="availAlert()"> </td>
           <% end %>
