@@ -8,6 +8,8 @@ table {
     border: 1px solid #aaa;
     border-collapse: collapse;
     overflow: hidden;
+    table-layout: fixed;
+    width: 100%;
 }
 
 table th {
@@ -16,6 +18,9 @@ table th {
 
 tbody td {
     border: 1px solid #aaa;
+    word-wrap: break-word;         
+    overflow-wrap: break-word;
+    line-break: none; 
 }
 
 tbody td, tbody th {
