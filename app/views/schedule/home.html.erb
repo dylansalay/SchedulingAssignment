@@ -48,10 +48,7 @@
 
 
 <script>
-
-# <%= javascript_tag do %>
-#   const workOrder = <%= @work_order.to_json %> 
-# <% end %>
+const order = <%= @work_order.inspect.html_safe %>;
 
 function schedAlert() {
   alert("There is a work order scheduled at this time");
