@@ -19,22 +19,22 @@
       <% @work_order.each do |w| %>
           <th width="200px"><%= w.time.beginning_of_hour.to_s(:due_time)%></th>
           <% if w.technician_id ==1 %>
-            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%><br>Location: <%= w.location.name%>, <%= w.location.city %><br>Price: $<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)">Location: <%= w.location.name%>, <%= w.location.city %><br>Start Time: <%= w.time.to_s(:due_time)%><br>Price: $<%= w.price %></td>
           <% else %>
             <td onclick="availAlert(<%= w.technician_id %>)"> </td>
           <% end %>
           <% if w.technician_id ==2 %>
-            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%><br>Location: <%= w.location.name%>, <%= w.location.city %>, Price: $<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)">Location: <%= w.location.name%>, <%= w.location.city %><br>Start Time: <%= w.time.to_s(:due_time)%><br>Price: $<%= w.price %></td>
           <% else %>
             <td onclick="availAlert()"> </td>
           <% end %>
           <% if w.technician_id ==3 %>
-            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%><br>Location: <%= w.location.name%>, <%= w.location.city %><br>Price: $<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)">Location: <%= w.location.name%>, <%= w.location.city %><br>Start Time: <%= w.time.to_s(:due_time)%><br>Price: $<%= w.price %></td>
           <% else %>
           <td onclick="availAlert()"> </td>
             <% end %>
           <% if w.technician_id ==4 %>
-            <td onclick="schedAlert(<%= w.id %>)"><%= w.time.to_s(:due_time)%><br>Location: <%= w.location.name%>, <%= w.location.city %><br>Price: $<%= w.price %></td>
+            <td onclick="schedAlert(<%= w.id %>)">Location: <%= w.location.name%>, <%= w.location.city %><br>Start Time: <%= w.time.to_s(:due_time)%><br>Price: $<%= w.price %></td>
           <% else %>
             <td onclick="availAlert()"> </td>
           <% end %>
