@@ -1,6 +1,6 @@
 # Technician Schedule Application
 
-This is an application that stores locations, technicians, and work orders in a database, and displays them on a scheduling grid, ordered by time. If a user clicks on a populated cell in the table, an alert will appear detailing the duration of the current work order. If a user clicks on an empty cell in the table, an alert will appear detailing the amount of time between the technician's previous work order and upcoming work order. 
+This application is designed to store locations, technicians, and work orders in a database, and display them on a scheduling grid, ordered by time. If a user clicks on a populated cell in the table, an alert will appear detailing the duration of the current work order. If a user clicks on an empty cell in the table, an alert will appear detailing the amount of time between the technician's previous work order and upcoming work order. 
 
 ## Built With:
 - Ruby version 2.4
